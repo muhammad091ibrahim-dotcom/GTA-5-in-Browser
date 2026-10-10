@@ -1,0 +1,9 @@
+mirror/
+runtime/
+.downloads/
+.installed-parts/
+__pycache__/
+tests/
+*.log
+web-output/
+game-build-*/
