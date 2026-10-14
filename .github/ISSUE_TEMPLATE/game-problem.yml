@@ -1,0 +1,53 @@
+name: Game loading or graphics problem
+description: Report a loading freeze, black screen, crash, or performance problem.
+title: "[Game] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Enable graphics acceleration and relaunch your browser first. The loading percentage alone cannot identify the cause. Please share the first error, not hundreds of repeated messages. Do not include passwords, tokens, or unrelated personal information.
+  - type: dropdown
+    id: launch
+    attributes:
+      label: How are you running the game?
+      options:
+        - Local Windows launcher
+        - Local Mac launcher
+        - Local Linux launcher
+        - Public website
+        - LAN or custom hosting
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Operating system and browser/version
+      placeholder: "Example: Windows 11, Chrome 155"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: GPU model and installed RAM
+      description: Use installed RAM, not free disk space or the browser's approximate deviceMemory value. Write unknown if needed.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: What happens and how can we reproduce it?
+      description: Include the hosted URL if applicable, Story/Sandbox and map, last loading message, and the action that triggers the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: First console error and failed request
+      description: Open developer tools, reload, and copy the first red error with its stack trace. Include any failed Network request and HTTP status. Say if you cannot find an error.
+      render: text
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Compatibility report and file verification
+      description: Open /__support/ on the game site or local server. Review and copy diagnostics. For a local install, include Verify-Game's final result and whether all 14 parts finished.
+      render: text
