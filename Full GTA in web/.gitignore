@@ -1,0 +1,12 @@
+mirror/
+runtime/
+.downloads/
+.installed-parts/
+__pycache__/
+*.log
+web-output/
+game-build-*/
+pages-output/
+hosting-probe-output/
+.wrangler/
+release-output/
